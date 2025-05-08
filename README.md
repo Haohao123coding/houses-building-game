@@ -6,8 +6,8 @@
 
 ## en / 英文
 
-A game of building houses.
+A game of building houses, is developing.
 
 ## zh-cn / 简体中文
 
-一个建造房子的游戏。
+一个建造房子的游戏，正在开发中。
