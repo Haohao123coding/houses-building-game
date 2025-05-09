@@ -1,8 +1,11 @@
 # Houses building game
 
-![GitHub watchers](https://img.shields.io/github/watchers/Haohao123coding/houses-building-game.svg?style=social) & 
-![GitHub forks](https://img.shields.io/github/forks/Haohao123coding/houses-building-game.svg?style=social) & 
+![GitHub watchers](https://img.shields.io/github/watchers/Haohao123coding/houses-building-game.svg?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Haohao123coding/houses-building-game.svg?style=social)
 ![GitHub stars](https://img.shields.io/github/stars/Haohao123coding/houses-building-game.svg?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/Haohao123coding/houses-building-game.svg)
+[![Issues](https://img.shields.io/github/issues/Haohao123coding/houses-building-game.svg)]()
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Haohao123coding/houses-building-game.svg)
 
 ## en / 英文
 
