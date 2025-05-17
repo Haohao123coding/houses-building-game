@@ -17,7 +17,7 @@ h2{
     color: #333
 }
 
-.start-board, .difficulty-board{
+.start-board, .difficulty-board, .allocate-board{
     padding: 40px 0 60px;
     max-width: 1200px;
     margin: 0 auto; /* 水平居中 */
@@ -28,6 +28,29 @@ h2{
 
 .difficulty-board{
     display: none;
+}
+
+.allocate-board{
+    display: none;
+}
+
+.allocate-item{
+    font-size: 14px;
+    margin: 10px auto; /* 水平居中 */
+}
+
+.allocate-item label{
+    font-size: 16px;
+    text-align: center;
+}
+
+.allocate-item input{
+    width: 60px;
+    padding: 8px;
+    border: 2px solid #dedede;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
 }
 
 .btnblue, .btngreen, .btnyellow, .btnorange, .btnred{

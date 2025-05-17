@@ -31,4 +31,9 @@ function startGame(difficulty){
     brick = startResource;
     sand = startResource;
     money = startResource;
+
+    document.querySelector(".start-board").style.display = "none";
+    document.querySelector(".difficulty-board").style.display = "none";
+
+    document.querySelector(".allocate-board").style.display = "block";
 }
