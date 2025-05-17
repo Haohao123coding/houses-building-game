@@ -20,19 +20,19 @@ function backToStart(){
 
 function readyGame(difficulty){
     switch(difficulty){
-        case 1:
+        case 1: // 30 + 15 = 45 total
             startResource = 10;
             additionalResource = 15;
             break;
-        case 2:
+        case 2: // 15 + 10 = 25 total
             startResource = 5;
             additionalResource = 10;
             break;
-        case 3:
+        case 3: // 9 + 5 = 14 total
             startResource = 3;
             additionalResource = 5;
             break;
-        case 4:
+        case 4: // 0 + 0 = 0 total
             startResource = 0;
             additionalResource = 0;
             break;
