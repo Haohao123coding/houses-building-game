@@ -1,1 +1,18 @@
+/* 初始隐藏难度选择面板 */
+.difficulty-board {
+    display: none;
+}
 
+/* 按钮样式 */
+.btnblue {
+    background-color: #49e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btngreen { background-color: #4d4; }
+.btnyellow { background-color: #ee1; }
+.btnorange { background-color: #fa0; }
+.btnred { background-color: #f44; }
