@@ -60,7 +60,7 @@ function endAllocate(){
 
     for(const [key, val] of Object.entries(values)){
         if(!val || val.trim() === ""){
-            alert(`${key}值不能为空！`);
+            alert(`${val} 值不能为空！`);
             return;
         }
     }
@@ -68,15 +68,15 @@ function endAllocate(){
     for(const [key, val] of Object.entries(values)){
         const cur = parseInt(val);
         if(isNaN(cur) || !Number.isInteger(cur) || cur.toString() !== val.trim()){
-            alert(`值必须是整数！`);
+            alert(`${key} 值必须是整数！`);
             return;
         }
         ans[key] = cur;
     }
-document.querySelector(".start-board").style.display = "block";
-    for(const val of Object.values(values)){
+
+    for(const [key, val] of Object.entries(values)){
         if(val < 0){
-            alert(`值不能为负数！`);
+            alert(`${key} 值不能为负数！`);
             return;
         }
     }
