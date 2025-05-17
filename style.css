@@ -35,8 +35,13 @@ h2{
 }
 
 .allocate-item{
+    max-width: 400;
     font-size: 14px;
-    margin: 10px auto; /* 水平居中 */
+    margin: 40px auto; /* 水平居中 */
+    border: 2px solid #aaa;
+    background-color: #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 .allocate-item label{
@@ -45,12 +50,13 @@ h2{
 }
 
 .allocate-item input{
-    width: 60px;
+    width: 100px;
     padding: 8px;
-    border: 2px solid #dedede;
+    border: 2px solid #aaa;
     border-radius: 4px;
     font-size: 16px;
     text-align: center;
+    margin: 10px 0 10px;
 }
 
 .btnblue, .btngreen, .btnyellow, .btnorange, .btnred{
