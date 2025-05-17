@@ -36,11 +36,18 @@ h2{
     font-size: 14px;
     font-weight: 500;
     padding: 10px 20px;
-    margin: 20px auto; /* 水平居中 */
     border: none;
     cursor: pointer;
     border: none;
     border-radius: 6px;
+}
+
+.btnblue{
+    margin: 20px auto; /* 水平居中 */
+}
+
+.btngreen, .btnyellow, .btnorange, .btnred{
+    margin: 30px auto; /* 水平居中 */
 }
 
 .btnblue   {background-color: #49e;}
