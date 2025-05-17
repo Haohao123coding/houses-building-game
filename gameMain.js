@@ -1,3 +1,3 @@
 function showDifficuty(){
-    document.getElementById('difficulty-board').style.display = 'block';
+    document.getElementById("difficulty-board").style.display = "block";
 }
