@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2025 Haohao123coding
+
 let wood = 0;
 let brick = 0;
 let stone = 0;
