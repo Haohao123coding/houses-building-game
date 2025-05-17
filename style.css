@@ -1,14 +1,42 @@
-/* 初始隐藏难度选择面板 */
+body{
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    background-color: #f0f2f5;
+    text-align: center;
+    padding: 20px 0 0;
+}
+
+h1{
+    color: #353302;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+h2{
+    color: #333
+}
+
+.start-board, .difficulty-board{
+    padding: 40px 0 60px;
+    max-width: 1200px;
+    margin: 0 auto; /* 水平居中 */
+    background-color: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
 .difficulty-board{
     display: none;
 }
 
-/* 按钮样式 */
 .btnblue, .btngreen, .btnyellow, .btnorange, .btnred{
+    display: block;
     color: #fff;
     font-size: 14px;
     font-weight: 500;
     padding: 10px 20px;
+    margin: 20px auto; /* 水平居中 */
     border: none;
     cursor: pointer;
     border: none;
@@ -16,7 +44,7 @@
 }
 
 .btnblue   {background-color: #49e;}
-.btngreen  {background-color: #4d4;}
-.btnyellow {background-color: #dd1;}
-.btnorange {background-color: #fa0;}
-.btnred    {background-color: #f44;}
+.btngreen  {background-color: #4d4; min-width: 200px;}
+.btnyellow {background-color: #dd1; min-width: 200px;}
+.btnorange {background-color: #fa0; min-width: 200px;}
+.btnred    {background-color: #f44; min-width: 200px;}
