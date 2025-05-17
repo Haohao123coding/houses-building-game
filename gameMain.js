@@ -56,19 +56,44 @@ function endAllocate(){
         brick: document.getElementById("brick").value,
         stone: document.getElementById("stone").value
     }
+    const ans = {};
 
-    for (const [key, value] of Object.entries(values)){
-        if(!value || value.trim() === ""){
-            alert(`值不能为空！`);
+    for(const [key, val] of Object.entries(values)){
+        if(!val || val.trim() === ""){
+            alert(`${key}值不能为空！`);
             return;
         }
     }
 
-    additionalWood = parseInt(document.getElementById("wood").value)
-    additionalBrick = parseInt(document.getElementById("brick").value)
-    additionalStone = parseInt(document.getElementById("stone").value)
+    for(const [key, val] of Object.entries(values)){
+        const cur = parseInt(val);
+        if(isNaN(cur) || !Number.isInteger(cur) || cur.toString() !== val.trim()){
+            alert(`值必须是整数！`);
+            return;
+        }
+        ans[key] = cur;
+    }
+document.querySelector(".start-board").style.display = "block";
+    for(const val of Object.values(values)){
+        if(val < 0){
+            alert(`值不能为负数！`);
+            return;
+        }
+    }
 
-    wood += startResource;
-    brick += startResource;
-    stone += startResource;
+    const total = Object.values(ans).reduce((summ, v) => summ + v, 0); // 求和
+
+    if(total > additionalResource){
+        alert(`分配超出限制！`);
+    };
+
+    if(total < additionalResource){
+        alert(`未将资源分配完成！`);
+    };
+
+    wood += ans.wood;
+    brick += ans.brick;
+    stone += ans.stone;
+
+    document.querySelector(".start-board").style.display = "block";
 }

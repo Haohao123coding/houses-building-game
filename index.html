@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <p data-tooltip="Wood">木材: <span id="wood">10</span></p>
+
         <div class = "start-board">
             <h1>房屋建造游戏</h1>
             <button onclick="showDifficulty()" class = "btnblue">开始游戏</button>
@@ -27,7 +29,7 @@
             <span id="additional-resource">15</span> 个资源可以分配。</p>
             <div class = "allocate-items">
                 <div class = "allocate-item">
-                    <label for="wood">木头：</label>
+                    <label for="wood">木材：</label>
                     <input type="number" id="wood" min="0" value="0">
                 </div>
                 <div class = "allocate-item">
