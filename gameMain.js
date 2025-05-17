@@ -7,6 +7,7 @@ let stone = 0;
 let money = 0;
 let startResource = 0;
 let additionalResource = 0;
+let difficulty = 0;
 
 function showDifficulty(){
     document.querySelector(".difficulty-board").style.display = "block";
@@ -18,7 +19,8 @@ function backToStart(){
     document.querySelector(".difficulty-board").style.display = "none";
 }
 
-function readyGame(difficulty){
+function readyGame(difficulty_){
+    difficulty = difficulty_;
     switch(difficulty){
         case 1: // 30 + 15 = 45 total
             startResource = 10;
