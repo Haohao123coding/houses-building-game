@@ -4,10 +4,16 @@
 let wood = 0;
 let brick = 0;
 let stone = 0;
+
 let money = 0;
+
 let startResource = 0;
 let additionalResource = 0;
 let difficulty = 0;
+
+let curWood = 0;
+let curBrick = 0;
+let curStone = 0;
 
 function showDifficulty(){
     document.querySelector(".difficulty-board").style.display = "block";
@@ -50,40 +56,62 @@ function readyGame(difficulty_){
     document.querySelector(".allocate-board").style.display = "block";
     document.getElementById("start-resource").textContent = startResource;
     document.getElementById("additional-resource").textContent = additionalResource;
+
+    document.getElementById("cur-wood").textContent = curWood;
+    document.getElementById("cur-brick").textContent = curBrick;
+    document.getElementById("cur-stone").textContent = curStone;
+}
+
+function allocateAddResource(typ){
+    switch(typ){
+        case 1:
+            curWood += 1;
+            break;
+        case 2:
+            curBrick += 1;
+            break;
+        case 3:
+            curStone += 1;
+            break;
+    }
+    document.getElementById("cur-wood").textContent = curWood;
+    document.getElementById("cur-brick").textContent = curBrick;
+    document.getElementById("cur-stone").textContent = curStone;
+}
+
+function allocateMinusResource(typ){
+    switch(typ){
+        case 1:
+            if(curWood === 0) break;
+            curWood -= 1;
+            break;
+        case 2:
+            if(curBrick === 0) break;
+            curBrick -= 1;
+            break;
+        case 3:
+            if(curStone === 0) break;
+            curStone -= 1;
+            break;
+    }
+    document.getElementById("cur-wood").textContent = curWood;
+    document.getElementById("cur-brick").textContent = curBrick;
+    document.getElementById("cur-stone").textContent = curStone;
 }
 
 function endAllocate(){
+    
     const values = {
-        wood: document.getElementById("wood").value,
-        brick: document.getElementById("brick").value,
-        stone: document.getElementById("stone").value
-    }
-    const ans = {};
-
-    for(const [key, val] of Object.entries(values)){
-        if(!val || val.trim() === ""){
-            alert(`${val} 值不能为空！`);
-            return;
-        }
+        wood: parseInt(curWood),
+        brick: parseInt(curBrick),
+        stone: parseInt(curStone)
     }
 
-    for(const [key, val] of Object.entries(values)){
-        const cur = parseInt(val);
-        if(isNaN(cur) || !Number.isInteger(cur) || cur.toString() !== val.trim()){
-            alert(`${key} 值必须是整数！`);
-            return;
-        }
-        ans[key] = cur;
-    }
+    let total = 0;
 
-    for(const [key, val] of Object.entries(values)){
-        if(val < 0){
-            alert(`${key} 值不能为负数！`);
-            return;
-        }
-    }
-
-    const total = Object.values(ans).reduce((summ, v) => summ + v, 0); // 求和
+    total += values.wood;
+    total += values.brick;
+    total += values.stone;
 
     if(total > additionalResource){
         alert(`分配超出限制！`);
@@ -93,9 +121,7 @@ function endAllocate(){
         alert(`未将资源分配完成！`);
     };
 
-    wood += ans.wood;
-    brick += ans.brick;
-    stone += ans.stone;
-
-    document.querySelector(".start-board").style.display = "block";
+    wood += values.wood;
+    brick += values.brick;
+    stone += values.stone;
 }

@@ -7,8 +7,6 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <p data-tooltip="Wood">木材: <span id="wood">10</span></p>
-
         <div class = "start-board">
             <h1>房屋建造游戏</h1>
             <button onclick="showDifficulty()" class = "btnblue">开始游戏</button>
@@ -23,23 +21,35 @@
             <button onclick="backToStart()" class = "btnblue">返回主菜单</button>
         </div>
 
-        <div class = "allocate-board" style="display: none;"> <!-- [todo] 更改为 “减号(-) 当前数字 加号(+)” 形式 -->
+        <div class = "allocate-board" style="display: none;">
             <h2>额外资源分配</h2>
             <p>除了初始的各项 <span id="start-resource">10</span> 个资源以外，你还有
             <span id="additional-resource">15</span> 个资源可以分配。</p>
             <div class = "allocate-items">
                 <div class = "allocate-item">
                     <label for="wood">木材：</label>
-                    <input type="number" id="wood" min="0" value="0">
+                    <button onclick = "allocateAddResource(1)" class = "btnallocate">+</button>
+                    <span style = "font-size: 18px;" id = "cur-wood">0</span>
+                    <button onclick = "allocateMinusResource(1)" class = "btnallocate">-</button>
                 </div>
                 <div class = "allocate-item">
                     <label for="brick">砖块：</label>
-                    <input type="number" id="brick" min="0" value="0">
+                    <button onclick = "allocateAddResource(2)" class = "btnallocate">+</button>
+                    <span style = "font-size: 18px;" id = "cur-brick">0</span>
+                    <button onclick = "allocateMinusResource(2)" class = "btnallocate">-</button>
                 </div>
+                <div class = "allocate-item">
+                    <label for="stone">石头：</label>
+                    <button onclick = "allocateAddResource(3)" class = "btnallocate">+</button>
+                    <span style = "font-size: 18px;" id = "cur-stone">0</span>
+                    <button onclick = "allocateMinusResource(3)" class = "btnallocate">-</button>
+                </div>
+                <!-- 原本代码
                 <div class = "allocate-item">
                     <label for="stone">石头：</label>
                     <input type="number" id="stone" min="0" value="0">
                 </div>
+                -->
             </div>
             <button onclick="endAllocate()" class = "btnblue">确认分配</button>
         </div>
