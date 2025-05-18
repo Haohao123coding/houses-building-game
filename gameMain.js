@@ -6,6 +6,7 @@ let brick = 0;
 let stone = 0;
 
 let money = 0;
+let score = 0;
 
 let startResource = 0;
 let additionalResource = 0;
@@ -14,6 +15,8 @@ let difficulty = 0;
 let curWood = 0;
 let curBrick = 0;
 let curStone = 0;
+
+let remainingTime = 20;
 
 function showDifficulty(){
     document.querySelector(".difficulty-board").style.display = "block";
@@ -31,18 +34,22 @@ function readyGame(difficulty_){
         case 1: // 30 + 15 = 45 total
             startResource = 10;
             additionalResource = 15;
+            document.getElementById("difficulty-id").textContent = "简单";
             break;
         case 2: // 15 + 10 = 25 total
             startResource = 5;
             additionalResource = 10;
+            document.getElementById("difficulty-id").textContent = "普通";
             break;
         case 3: // 9 + 5 = 14 total
             startResource = 3;
             additionalResource = 5;
+            document.getElementById("difficulty-id").textContent = "困难";
             break;
         case 4: // 0 + 0 = 0 total
             startResource = 0;
             additionalResource = 0;
+            document.getElementById("difficulty-id").textContent = "极难";
             break;
     }
     wood = startResource;
@@ -100,7 +107,6 @@ function allocateMinusResource(typ){
 }
 
 function endAllocate(){
-    
     const values = {
         wood: parseInt(curWood),
         brick: parseInt(curBrick),
@@ -115,13 +121,25 @@ function endAllocate(){
 
     if(total > additionalResource){
         alert(`分配超出限制！`);
+        return;
     };
 
     if(total < additionalResource){
         alert(`未将资源分配完成！`);
+        return;
     };
 
     wood += values.wood;
     brick += values.brick;
     stone += values.stone;
+
+    document.getElementById("wood-id").textContent = wood;
+    document.getElementById("brick-id").textContent = brick;
+    document.getElementById("stone-id").textContent = stone;
+    document.getElementById("money-id").textContent = money;
+    document.getElementById("remaining-time").textContent = remainingTime;
+    document.getElementById("score-id").textContent = score;
+
+    document.querySelector(".allocate-board").style.display = "none";
+    document.querySelector(".game-board").style.display = "block"; // [todo] flexbox (maybe no)
 }
