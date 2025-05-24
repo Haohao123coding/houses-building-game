@@ -78,6 +78,25 @@ h2{
     margin: 0 auto; /* 水平居中 */
 }
 
+.player-stats{
+    margin: 0 0 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ccc;
+    padding: 10px;
+    max-width: 600px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+}
+
+.game-main-board{
+    display: block;
+}
+
+.game-get-board{
+    display: none;
+}
+
 .go-option{
     display: block;
     min-width: 500px;

@@ -106,6 +106,15 @@ function allocateMinusResource(typ){
     document.getElementById("cur-stone").textContent = curStone;
 }
 
+function renewStats(){
+    document.getElementById("wood-id").textContent = wood;
+    document.getElementById("brick-id").textContent = brick;
+    document.getElementById("stone-id").textContent = stone;
+    document.getElementById("money-id").textContent = money;
+    document.getElementById("remaining-time").textContent = remainingTime;
+    document.getElementById("score-id").textContent = score;
+}
+
 function endAllocate(){
     const values = {
         wood: parseInt(curWood),
@@ -133,13 +142,44 @@ function endAllocate(){
     brick += values.brick;
     stone += values.stone;
 
-    document.getElementById("wood-id").textContent = wood;
-    document.getElementById("brick-id").textContent = brick;
-    document.getElementById("stone-id").textContent = stone;
-    document.getElementById("money-id").textContent = money;
-    document.getElementById("remaining-time").textContent = remainingTime;
-    document.getElementById("score-id").textContent = score;
+    renewStats();
 
     document.querySelector(".allocate-board").style.display = "none";
     document.querySelector(".game-board").style.display = "block"; // [todo] flexbox (maybe no)
+}
+
+function showAnotherBoard(boardNum){
+    document.querySelector(".game-main-board").style.display = "none";
+    switch(boardNum){
+        case 1:
+            document.querySelector(".game-get-board").style.display = "block";
+            break;
+    }
+}
+
+function backToMainBoard(){
+    document.querySelector(".game-get-board").style.display = "none";
+
+    document.querySelector(".game-main-board").style.display = "block";
+}
+
+function getResource(typOf){
+    if(remainingTime === 0){
+        alert(`时间点不足，无法获得资源！`);
+        return;
+    }
+    switch(typOf){
+        case 1:
+            wood += 1;
+            break;
+        case 2:
+            brick += 1;
+            break;
+        case 3:
+            stone += 1;
+            break;
+    }
+    remainingTime -= 1;
+    renewStats();
+    backToMainBoard();
 }
