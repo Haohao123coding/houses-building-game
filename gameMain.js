@@ -120,6 +120,12 @@ function renewStats(){
     document.getElementById("score-id").textContent = score;
 }
 
+function renewBuyPrices(){
+    document.getElementById("wood-buy-price").textContent = Math.round(woodPrice * 1.1);
+    document.getElementById("brick-buy-price").textContent = Math.round(brickPrice * 1.1);
+    document.getElementById("stone-buy-price").textContent = Math.round(stonePrice * 1.1);
+}
+
 function endAllocate(){
     const values = {
         wood: parseInt(curWood),
@@ -203,6 +209,7 @@ function showOneMarketBoard(boardNum){
             break;
         case 2:
             document.querySelector(".market-buy-board").style.display = "block";
+            renewBuyPrices();
             break;
         case 3:
             document.querySelector(".market-sell-board").style.display = "block";
