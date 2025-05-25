@@ -6,7 +6,6 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Haohao123coding/houses-building-game.svg)
 ![GitHub issues](https://img.shields.io/github/issues/Haohao123coding/houses-building-game.svg)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Haohao123coding/houses-building-game.svg)
-![What](https://img.shields.io/badge/Page_Views_in_1234.12.31-0-1C1)
 
 ## en / 英文
 
