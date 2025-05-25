@@ -1,6 +1,6 @@
 <!-- SPDX-License-Identifier: MIT -->
 <!-- Copyright (c) 2025 Haohao123coding -->
- 
+
 <html lang = "zh-CN">
     <head>
         <meta charset="UTF-8">
@@ -111,7 +111,7 @@
                     <h2>购买资源</h2>
                     <label>数量：</label>
                     <button onclick = "marketChangeNumber(1)" class = "btnchange">+</button>
-                    <span style = "font-size: 18px;" id = "cur-number">0</span>
+                    <span style = "font-size: 18px;" id = "cur-buy-number"></span>
                     <button onclick = "marketChangeNumber(-1)" class = "btnchange">-</button>
                     <button onclick = "buyResource(1)" class = "go-option">
                         <h3>购买木材</h3>
@@ -130,7 +130,22 @@
 
                 <div class = "market-sell-board">
                     <h2>售卖资源</h2>
-                    <!-- todo -->
+                    <label>数量：</label>
+                    <button onclick = "marketChangeNumber(1)" class = "btnchange">+</button>
+                    <span style = "font-size: 18px;" id = "cur-sell-number"></span>
+                    <button onclick = "marketChangeNumber(-1)" class = "btnchange">-</button>
+                    <button onclick = "sellResource(1)" class = "go-option">
+                        <h3>售卖木材</h3>
+                        <p>单价：<span id = "wood-sell-price"></span></p> <!-- [todo] 总价 -->
+                    </button>
+                    <button onclick = "sellResource(2)" class = "go-option">
+                        <h3>售卖砖块</h3>
+                        <p>单价：<span id = "brick-sell-price"></span></p>
+                    </button>
+                    <button onclick = "sellResource(3)" class = "go-option">
+                        <h3>售卖石头</h3>
+                        <p>单价：<span id = "stone-sell-price"></span></p>
+                    </button>
                     <button onclick = "showOneMarketBoard(1)" class = "btnblue">返回</button>
                 </div>
             </div>

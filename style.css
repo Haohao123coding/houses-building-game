@@ -62,7 +62,7 @@ label{
     margin: 10px 0 10px;
 }
 
-.allocate-item .btnallocate, .market-buy-board .btnchange{
+.btnallocate, .btnchange{
     color: #000;
     width: 40px;
     height: 40px;
@@ -72,11 +72,11 @@ label{
     border-radius: 6px;
 }
 
-.allocate-item .btnallocate{
+.btnallocate{
     margin: 20px;
 }
 
-.market-buy-board .btnchange{
+.btnchange{
     margin: 0 20px 20px;
 }
 
