@@ -97,6 +97,18 @@ h2{
     display: none;
 }
 
+.game-market-board{
+    display: none;
+}
+
+.market-buy-board{
+    display: none;
+}
+
+.market-sell-board{
+    display: none;
+}
+
 .go-option{
     display: block;
     min-width: 500px;
@@ -141,7 +153,12 @@ h2{
 }
 
 .btnblue   {background-color: #49e;}
-.btngreen  {background-color: #4d4; min-width: 200px;}
-.btnyellow {background-color: #dd1; min-width: 200px;}
-.btnorange {background-color: #fa0; min-width: 200px;}
-.btnred    {background-color: #f44; min-width: 200px;}
+.btngreen  {background-color: #4d4;}
+.btnyellow {background-color: #dd1;}
+.btnorange {background-color: #fa0;}
+.btnred    {background-color: #f44;}
+
+.difficulty-board .btngreen, .difficulty-board .btnyellow,
+.difficulty-board .btnorange, .difficulty-board .btnred{
+    min-width: 200px;
+}

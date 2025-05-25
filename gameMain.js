@@ -154,11 +154,15 @@ function showAnotherBoard(boardNum){
         case 1:
             document.querySelector(".game-get-board").style.display = "block";
             break;
+        case 2:
+            document.querySelector(".game-market-board").style.display = "block";
+            break;
     }
 }
 
 function backToMainBoard(){
     document.querySelector(".game-get-board").style.display = "none";
+    document.querySelector(".game-market-board").style.display = "none";
 
     document.querySelector(".game-main-board").style.display = "block";
 }
@@ -182,4 +186,21 @@ function getResource(typOf){
     remainingTime -= 1;
     renewStats();
     backToMainBoard();
+}
+
+function showOneMarketBoard(boardNum){
+    document.querySelector(".market-main-board").style.display = "none";
+    document.querySelector(".market-buy-board").style.display = "none";
+    document.querySelector(".market-sell-board").style.display = "none";
+    switch(boardNum){
+        case 1:
+            document.querySelector(".market-main-board").style.display = "block";
+            break;
+        case 2:
+            document.querySelector(".market-buy-board").style.display = "block";
+            break;
+        case 3:
+            document.querySelector(".market-sell-board").style.display = "block";
+            break;
+    }
 }
