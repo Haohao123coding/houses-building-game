@@ -165,7 +165,7 @@ function endAllocate(){
     document.querySelector(".game-board").style.display = "block"; // [todo] flexbox (maybe no)
 }
 
-// main
+// main(3)
 
 function showAnotherBoard(boardNum){
     document.querySelector(".game-main-board").style.display = "none";
@@ -176,6 +176,9 @@ function showAnotherBoard(boardNum){
         case 2:
             document.querySelector(".game-market-board").style.display = "block";
             break;
+        case 3:
+            document.querySelector(".game-build-board").style.display = "block";
+            break;
     }
 }
 
@@ -183,15 +186,17 @@ function backToMainBoard(){
     document.querySelector(".game-get-board").style.display = "none";
     document.querySelector(".game-market-board").style.display = "none";
     showOneMarketBoard(1);
+    document.querySelector(".game-build-board").style.display = "none";
 
     document.querySelector(".game-main-board").style.display = "block";
 }
 
 function nextTime(tims){
     remainingTime -= tims;
+    renewStats();
 }
 
-// get
+// get(1)
 
 function getResource(typOf){
     if(remainingTime === 0){
@@ -214,7 +219,7 @@ function getResource(typOf){
     backToMainBoard();
 }
 
-// market
+// market(4)
 
 function showOneMarketBoard(boardNum){
     document.querySelector(".market-main-board").style.display = "none";
@@ -315,4 +320,43 @@ function sellResource(typOf){
     }
     renewStats();
     backToMainBoard();
+}
+
+// build(2)
+
+function tryBuild(needWood, needBrick, needStone, needTime, getScore){
+    if(needWood > wood){
+        alert(`木材不足！`);
+        return;
+    }
+    if(needBrick > brick){
+        alert(`砖块不足！`);
+        return;
+    }
+    if(needStone > stone){
+        alert(`石头不足！`);
+        return;
+    }
+    if(needTime > remainingTime){
+        alert(`时间不足！`);
+        return;
+    }
+    wood -= needWood;
+    brick -= needBrick;
+    stone -= needStone;
+    nextTime(needTime);
+    score += getScore;
+    renewStats();
+    backToMainBoard();
+}
+
+function buildHouse(typOf){
+    switch(typOf){
+        case 1:
+            tryBuild(1, 1, 1, 1, 3);
+            break;
+        case 2:
+            tryBuild(1, 2, 2, 2, 5);
+            break;
+    }
 }

@@ -100,19 +100,7 @@ label{
     display: block;
 }
 
-.game-get-board{
-    display: none;
-}
-
-.game-market-board{
-    display: none;
-}
-
-.market-buy-board{
-    display: none;
-}
-
-.market-sell-board{
+.game-get-board, .game-market-board, .market-buy-board, .market-sell-board, .game-build-board{
     display: none;
 }
 

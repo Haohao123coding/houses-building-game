@@ -3,9 +3,10 @@
 
 <html lang = "zh-CN">
     <head>
-        <meta charset="UTF-8">
-        <script src="gameMain.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <meta charset = "UTF-8">
+        <title>房屋建造游戏</title>
+        <script src = "gameMain.js"></script>
+        <link rel = "stylesheet" href = "style.css">
     </head>
     <body>
         <div class = "start-board">
@@ -60,6 +61,7 @@
             【剩余时间：<span id="remaining-time"></span> | 难度：<span id="difficulty-id"></span> | 
             木材：<span id="wood-id"></span> | 砖块：<span id="brick-id"></span> | 石头：<span id="stone-id"></span> | 
             金钱：<span id="money-id"></span> | 积分：<span id="score-id"></span>】</p>
+
             <div class = "game-main-board">
                 <h2>房屋建造游戏</h2>
                 <button onclick = "showAnotherBoard(1)" class = "go-option">
@@ -70,7 +72,7 @@
                     <h3>市场</h3>
                     <p>售卖资源，赚取金钱；或是花费金钱，购买资源（不消耗时间点）</p>
                 </button>
-                <button class = "go-option">
+                <button onclick = "showAnotherBoard(3)" class = "go-option">
                     <h3>建造</h3>
                     <p>建造房子，获得积分（消耗 1~3 时间点）</p>
                 </button>
@@ -136,7 +138,7 @@
                     <button onclick = "marketChangeNumber(-1)" class = "btnchange">-</button>
                     <button onclick = "sellResource(1)" class = "go-option">
                         <h3>售卖木材</h3>
-                        <p>单价：<span id = "wood-sell-price"></span></p> <!-- [todo] 总价 -->
+                        <p>单价：<span id = "wood-sell-price"></span></p>
                     </button>
                     <button onclick = "sellResource(2)" class = "go-option">
                         <h3>售卖砖块</h3>
@@ -148,6 +150,23 @@
                     </button>
                     <button onclick = "showOneMarketBoard(1)" class = "btnblue">返回</button>
                 </div>
+            </div>
+
+            <div class = "game-build-board"> <!-- [todo] 通过 Javascript 动态添加房屋 -->
+                <h2>建造</h2>
+                <button onclick = "buildHouse(1)" class = "go-option">
+                    <h3>基本住宅</h3>
+                    <p>消耗资源：1 木材，1 砖块，1 石头</p>
+                    <p>消耗时间：1</p>
+                    <p>奖励：3 积分</p>
+                </button>
+                <button onclick = "buildHouse(2)" class = "go-option">
+                    <h3>医院</h3>
+                    <p>消耗资源：1 木材，2 砖块，2 石头</p>
+                    <p>消耗时间：2</p>
+                    <p>奖励：5 积分</p>
+                </button>
+                <button onclick = "backToMainBoard()" class = "btnblue">返回</button>
             </div>
         </div>
     </body>
