@@ -7,6 +7,8 @@
 ![GitHub issues](https://img.shields.io/github/issues/Haohao123coding/houses-building-game.svg)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Haohao123coding/houses-building-game.svg)
 
+![Version](https://img.shields.io/badge/Version-[Alpha]_0.1.0-777)
+
 ## en / 英文
 
 A game of building houses, is developing.
