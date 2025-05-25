@@ -6,6 +6,7 @@
         <meta charset = "UTF-8">
         <title>房屋建造游戏</title>
         <script src = "gameMain.js"></script>
+        <script src = "housePool.js"></script>
         <link rel = "stylesheet" href = "style.css">
     </head>
     <body>
@@ -152,21 +153,8 @@
                 </div>
             </div>
 
-            <div class = "game-build-board"> <!-- [todo] 通过 Javascript 动态添加房屋 -->
-                <h2>建造</h2>
-                <button onclick = "buildHouse(1)" class = "go-option">
-                    <h3>基本住宅</h3>
-                    <p>消耗资源：1 木材，1 砖块，1 石头</p>
-                    <p>消耗时间：1</p>
-                    <p>奖励：3 积分</p>
-                </button>
-                <button onclick = "buildHouse(2)" class = "go-option">
-                    <h3>医院</h3>
-                    <p>消耗资源：1 木材，2 砖块，2 石头</p>
-                    <p>消耗时间：2</p>
-                    <p>奖励：5 积分</p>
-                </button>
-                <button onclick = "backToMainBoard()" class = "btnblue">返回</button>
+            <div class = "game-build-board" id = "houses-id">
+                <!-- 通过 Javascript 动态添加房屋 -->
             </div>
         </div>
     </body>

@@ -165,7 +165,32 @@ function endAllocate(){
     document.querySelector(".game-board").style.display = "block"; // [todo] flexbox (maybe no)
 }
 
-// main(3)
+function showHouses(){
+    const housesContainer = document.getElementById("houses-id");
+    housesContainer.innerHTML = `
+    <h2>建造</h2>
+    ${Object.entries(housePool).map(([houseNum, house]) => {
+        return `
+            <button onclick = "buildHouse(${houseNum})" class = "go-option">
+                <h3>${house.name}</h3>
+                <p style = "float: left;">消耗：${house.cost.wood} 木材，${house.cost.brick} 砖块，${house.cost.stone} 石头，${house.cost.time} 时间</p>
+                <p style = "float: right;">奖励：${house.scoreReward} 积分</p>
+            </button>
+        `;
+    }).join("")}
+    <button onclick = "backToMainBoard()" class = "btnblue">返回</button>
+    `
+    Object.entries(houses).map(([houseKey, house]) => {
+        return `
+            <div class="house">
+                <h3>${houseKey}</h3>
+                <p>价格：${house.price}元</p>
+                <p>位置：${house.location}</p>
+                <p>面积：${house.size}平方米</p>
+            </div>
+        `;
+    }).join('');
+}
 
 function showAnotherBoard(boardNum){
     document.querySelector(".game-main-board").style.display = "none";
@@ -178,6 +203,7 @@ function showAnotherBoard(boardNum){
             break;
         case 3:
             document.querySelector(".game-build-board").style.display = "block";
+            showHouses();
             break;
     }
 }
@@ -195,8 +221,6 @@ function nextTime(tims){
     remainingTime -= tims;
     renewStats();
 }
-
-// get(1)
 
 function getResource(typOf){
     if(remainingTime === 0){
@@ -218,8 +242,6 @@ function getResource(typOf){
     renewStats();
     backToMainBoard();
 }
-
-// market(4)
 
 function showOneMarketBoard(boardNum){
     document.querySelector(".market-main-board").style.display = "none";
@@ -322,8 +344,6 @@ function sellResource(typOf){
     backToMainBoard();
 }
 
-// build(2)
-
 function tryBuild(needWood, needBrick, needStone, needTime, getScore){
     if(needWood > wood){
         alert(`木材不足！`);
@@ -351,12 +371,11 @@ function tryBuild(needWood, needBrick, needStone, needTime, getScore){
 }
 
 function buildHouse(typOf){
-    switch(typOf){
-        case 1:
-            tryBuild(1, 1, 1, 1, 3);
-            break;
-        case 2:
-            tryBuild(1, 2, 2, 2, 5);
-            break;
-    }
+    tryBuild(
+        housePool[typOf].cost.wood,
+        housePool[typOf].cost.brick,
+        housePool[typOf].cost.stone,
+        housePool[typOf].cost.time,
+        housePool[typOf].scoreReward
+    )
 }

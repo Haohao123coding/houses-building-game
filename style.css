@@ -118,6 +118,7 @@ label{
     text-align: left;
     padding: 5px 10px 0;
     font-size: 18px;
+    margin: 20px 0 20px;
 }
 
 .go-option p{
@@ -125,6 +126,15 @@ label{
     text-align: left;
     padding: 0 10px 5px;
     font-size: 14px;
+    margin: 10px 0 20px;
+}
+
+.game-build-board .go-option h3{
+    margin: 15px 0 5px;
+}
+
+.game-build-board .go-option p{
+    margin: 5px 0 15px;
 }
 
 .btnblue, .btngreen, .btnyellow, .btnorange, .btnred{
