@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2025 Haohao123coding
+
 const housePool = {
     1: {
         name: "住宅",
