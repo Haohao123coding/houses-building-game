@@ -14,7 +14,7 @@ const housePool = {
         woodDemand: 1, brickDemand: 3, stoneDemand: 1, timeDemand: 1,
         scoreReward: 5
     },
-    2: {
+    4: {
         name: "商业街",
         woodDemand: 2, brickDemand: 2, stoneDemand: 3, timeDemand: 3,
         scoreReward: 7
