@@ -180,6 +180,7 @@ function showAnotherBoard(boardNum){
 function backToMainBoard(){
     document.querySelector(".game-get-board").style.display = "none";
     document.querySelector(".game-market-board").style.display = "none";
+    showOneMarketBoard(1);
 
     document.querySelector(".game-main-board").style.display = "block";
 }
