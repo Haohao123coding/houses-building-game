@@ -1,22 +1,22 @@
 const housePool = {
     1: {
         name: "住宅",
-        woodDemand: 1, brickDemand: 1, stoneDemand: 1, timeDemand: 1,
+        cost: {wood: 1, brick: 1, stone: 1, time: 1},
         scoreReward: 3
     },
     2: {
         name: "医院",
-        woodDemand: 1, brickDemand: 2, stoneDemand: 2, timeDemand: 2,
+        cost: {wood: 1, brick: 2, stone: 2, time: 2},
         scoreReward: 5
     },
     3: {
         name: "工厂",
-        woodDemand: 1, brickDemand: 3, stoneDemand: 1, timeDemand: 1,
+        cost: {wood: 1, brick: 3, stone: 1, time: 2},
         scoreReward: 5
     },
     4: {
         name: "商业街",
-        woodDemand: 2, brickDemand: 2, stoneDemand: 3, timeDemand: 3,
-        scoreReward: 7
+        cost: {wood: 2, brick: 2, stone: 3, time: 3},
+        scoreReward: 8
     },
 }
