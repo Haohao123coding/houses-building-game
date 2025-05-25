@@ -68,7 +68,7 @@
                 </button>
                 <button onclick = "showAnotherBoard(2)" class = "go-option">
                     <h3>市场</h3>
-                    <p>售卖资源，赚取金钱；或是购买资源（消耗 1 时间点）</p>
+                    <p>售卖资源，赚取金钱；或是花费金钱，购买资源（不消耗时间点）</p>
                 </button>
                 <button class = "go-option">
                     <h3>建造</h3>
@@ -98,18 +98,33 @@
                     <h2>市场</h2>
                     <button onclick = "showOneMarketBoard(2)" class = "go-option">
                         <h3>购买资源</h3>
-                        <p>花费金钱，购买资源（消耗 1 时间点）</p>
+                        <p>花费金钱，购买资源</p>
                     </button>
                     <button onclick = "showOneMarketBoard(3)" class = "go-option">
                         <h3>售卖资源</h3>
-                        <p>售卖资源，赚取金钱（消耗 1 时间点）</p>
+                        <p>售卖资源，赚取金钱</p>
                     </button>
                     <button onclick = "backToMainBoard()" class = "btnblue">返回</button>
                 </div>
 
                 <div class = "market-buy-board">
                     <h2>购买资源</h2>
-                    <!-- todo -->
+                    <label>数量：</label>
+                    <button onclick = "marketChangeNumber(1)" class = "btnchange">+</button>
+                    <span style = "font-size: 18px;" id = "cur-number">0</span>
+                    <button onclick = "marketChangeNumber(-1)" class = "btnchange">-</button>
+                    <button onclick = "buyResource(1)" class = "go-option">
+                        <h3>购买木材</h3>
+                        <p>单价：<span id = "wood-buy-price"></span></p> <!-- [todo] 总价 -->
+                    </button>
+                    <button onclick = "buyResource(2)" class = "go-option">
+                        <h3>购买砖块</h3>
+                        <p>单价：<span id = "brick-buy-price"></span></p>
+                    </button>
+                    <button onclick = "buyResource(3)" class = "go-option">
+                        <h3>购买石头</h3>
+                        <p>单价：<span id = "stone-buy-price"></span></p>
+                    </button>
                     <button onclick = "showOneMarketBoard(1)" class = "btnblue">返回</button>
                 </div>
 

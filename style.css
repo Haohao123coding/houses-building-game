@@ -48,7 +48,7 @@ h2{
     border-radius: 5px;
 }
 
-.allocate-item label{
+label{
     font-size: 16px;
     text-align: center;
 }
@@ -62,7 +62,7 @@ h2{
     margin: 10px 0 10px;
 }
 
-.allocate-item .btnallocate{
+.allocate-item .btnallocate, .market-buy-board .btnchange{
     color: #000;
     width: 40px;
     height: 40px;
@@ -70,7 +70,14 @@ h2{
     background-color: #eee;
     border: 2px solid #bbb;
     border-radius: 6px;
+}
+
+.allocate-item .btnallocate{
     margin: 20px;
+}
+
+.market-buy-board .btnchange{
+    margin: 0 20px 20px;
 }
 
 .game-board{
@@ -84,7 +91,7 @@ h2{
     margin-right: auto;
     background-color: #eee;
     padding: 10px;
-    max-width: 600px;
+    max-width: 800px;
     border: 1px solid #bbb;
     border-radius: 6px;
 }

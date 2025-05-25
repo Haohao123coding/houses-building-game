@@ -15,6 +15,11 @@ let difficulty = 0;
 let curWood = 0;
 let curBrick = 0;
 let curStone = 0;
+let curMarketNumber = 0;
+
+let woodPrice = 2;
+let brickPrice = 2;
+let stonePrice = 2;
 
 let remainingTime = 20;
 
@@ -203,4 +208,47 @@ function showOneMarketBoard(boardNum){
             document.querySelector(".market-sell-board").style.display = "block";
             break;
     }
+}
+
+function marketChangeNumber(changeNum){
+    curMarketNumber += changeNum;
+    if(curMarketNumber < 0){
+        curMarketNumber = 0;
+    }
+    document.getElementById("cur-number").textContent = curMarketNumber;
+}
+
+function buyResource(typOf){
+    let curPrice = 0;
+    switch(typOf){
+        case 1:
+            curPrice = Math.round(woodPrice * curMarketNumber * 1.1);
+            if(curPrice > money){
+                alert(`金钱不足，无法购买！`);
+                return;
+            }
+            wood += curMarketNumber;
+            money -= curPrice;
+            break;
+        case 2:
+            curPrice = Math.round(brickPrice * curMarketNumber * 1.1);
+            if(curPrice > money){
+                alert(`金钱不足，无法购买！`);
+                return;
+            }
+            brick += curMarketNumber;
+            money -= curPrice;
+            break;
+        case 3:
+            curPrice = Math.round(stonePrice * curMarketNumber * 1.1);
+            if(curPrice > money){
+                alert(`金钱不足，无法购买！`);
+                return;
+            }
+            stone += curMarketNumber;
+            money -= curPrice;
+            break;
+    }
+    renewStats();
+    backToMainBoard();
 }
