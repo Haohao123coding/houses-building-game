@@ -165,6 +165,8 @@ function endAllocate(){
     document.querySelector(".game-board").style.display = "block"; // [todo] flexbox (maybe no)
 }
 
+// main
+
 function showAnotherBoard(boardNum){
     document.querySelector(".game-main-board").style.display = "none";
     switch(boardNum){
@@ -185,6 +187,12 @@ function backToMainBoard(){
     document.querySelector(".game-main-board").style.display = "block";
 }
 
+function nextTime(tims){
+    remainingTime -= tims;
+}
+
+// get
+
 function getResource(typOf){
     if(remainingTime === 0){
         alert(`时间点不足，无法获得资源！`);
@@ -201,10 +209,12 @@ function getResource(typOf){
             stone += 1;
             break;
     }
-    remainingTime -= 1;
+    nextTime(1);
     renewStats();
     backToMainBoard();
 }
+
+// market
 
 function showOneMarketBoard(boardNum){
     document.querySelector(".market-main-board").style.display = "none";
