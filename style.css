@@ -137,6 +137,14 @@ label{
     margin: 5px 0 15px;
 }
 
+.houses-cost{
+    float: left;
+}
+
+.houses-reward{
+    float: right;
+}
+
 .btnblue, .btngreen, .btnyellow, .btnorange, .btnred{
     display: block;
     color: #fff;

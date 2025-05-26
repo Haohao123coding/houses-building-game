@@ -173,8 +173,8 @@ function showHouses(){
         return `
             <button onclick = "buildHouse(${houseNum})" class = "go-option">
                 <h3>${house.name}</h3>
-                <p style = "float: left;">消耗：${house.cost.wood} 木材，${house.cost.brick} 砖块，${house.cost.stone} 石头，${house.cost.time} 时间</p>
-                <p style = "float: right;">奖励：${house.scoreReward} 积分</p>
+                <p class = "houses-cost">消耗：${house.cost.wood} 木材，${house.cost.brick} 砖块，${house.cost.stone} 石头，${house.cost.time} 时间</p>
+                <p class = "houses-reward">奖励：${house.scoreReward} 积分</p>
             </button>
         `;
     }).join("")}
