@@ -179,17 +179,6 @@ function showHouses(){
         `;
     }).join("")}
     <button onclick = "backToMainBoard()" class = "btnblue">返回</button>
-    `
-    Object.entries(houses).map(([houseKey, house]) => {
-        return `
-            <div class="house">
-                <h3>${houseKey}</h3>
-                <p>价格：${house.price}元</p>
-                <p>位置：${house.location}</p>
-                <p>面积：${house.size}平方米</p>
-            </div>
-        `;
-    }).join('');
 }
 
 function showAnotherBoard(boardNum){
