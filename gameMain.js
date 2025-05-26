@@ -179,6 +179,7 @@ function showHouses(){
         `;
     }).join("")}
     <button onclick = "backToMainBoard()" class = "btnblue">返回</button>
+    `
 }
 
 function showAnotherBoard(boardNum){
