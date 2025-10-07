@@ -9,7 +9,7 @@
 
 ## zh-cn / 简体中文
 
-一个建造房子的游戏，使用 [MIT LICENSE](https://choosealicense.com/licenses/mit)，现在已开发到 Alpha 版本。
+一个建造房子的游戏，使用 [MIT LICENSE](https://choosealicense.com/licenses/mit)。
 
 游戏中包含难度选择、资源的分配、获取和买卖，以及不同房屋建筑的建造。
 
